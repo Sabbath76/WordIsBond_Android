@@ -26,6 +26,8 @@ public class ImageListActivity extends ListActivity  implements RadioGroup.OnChe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
+        // test comment
+        
         setContentView(R.layout.imagelist);
 
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
