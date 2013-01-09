@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="false">
+    <item android:drawable="@drawable/bigloader_01" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_02" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_03" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_04" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_05" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_06" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_07" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_08" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_09" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_10" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_11" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_12" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_13" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_14" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_15" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_16" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_17" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_18" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_19" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_20" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_21" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_22" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_23" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_24" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_25" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_26" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_27" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_28" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_29" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_30" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_31" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_32" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_33" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_34" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_35" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_36" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_37" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_38" android:duration="30" />
+    <item android:drawable="@drawable/bigloader_39" android:duration="30" />
+    
+</animation-list>

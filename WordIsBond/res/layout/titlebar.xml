@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="#101010"
+    android:orientation="horizontal" >
+
+    
+    <ImageButton
+        android:id="@+id/options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+    	android:background="#000000"
+        android:src="@drawable/top_options" />
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_weight="2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bond_logo" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_gravity="right|center_vertical"
+    	android:background="#101010"
+    	android:orientation="horizontal" >
+    
+    <ImageButton
+        android:id="@+id/topRewind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#000000"
+        android:src="@drawable/top_rewind" />
+
+    <ImageButton
+        android:id="@+id/topPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#000000"
+        android:src="@drawable/top_play" />
+
+    <ImageButton
+        android:id="@+id/topFastForwards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#000000"
+        android:src="@drawable/top_fastforward" />
+</LinearLayout>
+
+</LinearLayout>

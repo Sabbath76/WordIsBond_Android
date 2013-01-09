@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+ <group android:id="@+id/group_popupmenu" android:checkableBehavior="all">
+      <item android:id="@+id/tablet"
+          android:title="WordIsBond Tablet"/>
+      <item android:id="@+id/mobile"
+          android:title="WordIsBond Mobile"/>
+      <item android:id="@+id/jazz"
+          android:title="WordIsBond Jazz"/>
+      <item android:id="@+id/test"
+          android:title="WordIsBond TEST"/>
+      </group>
+    
+</menu>

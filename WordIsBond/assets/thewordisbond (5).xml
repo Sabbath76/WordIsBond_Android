@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0"><channel><title>Word Is Bond</title><link>http://www.thewordisbond.com</link><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/thewordisbond" /><description>Uniting Hip Hop's Underground</description><language>en-US</language><lastBuildDate>Thu, 06 Sep 2012 01:53:30 PDT</lastBuildDate><generator>http://wordpress.org/?v=3.4.1</generator><sy:updatePeriod xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">hourly</sy:updatePeriod><sy:updateFrequency xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">1</sy:updateFrequency><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/thewordisbond" /><feedburner:info uri="thewordisbond" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><image><link>http://www.thewordisbond.com/</link><url>http://cdn.thewordisbond.com/wp-content/themes/wordisbond/img/top_logo.png</url><title>WIB Logo</title></image><feedburner:emailServiceId>thewordisbond</feedburner:emailServiceId><feedburner:feedburnerHostname>http://feedburner.google.com</feedburner:feedburnerHostname><item><title>Adversaree &amp; EshBeats – Hood Novel (Canada)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/MrJ9pBqWASs/</link><category>AUDIO</category><category>adversaree</category><category>canada</category><category>eshbeats</category><category>hip hop</category><category>hood novel</category><category>toronto</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tasha</dc:creator><pubDate>Thu, 06 Sep 2012 01:27:34 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71298</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[
+		<link type="text/css" rel="stylesheet" href="http://wib.wordisbond.netdna-cdn.com/wp-content/plugins/viral-lock/css/style.css">
+		<style type="text/css">
+			.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {display: none !important;}
+			.sociallocker-box iframe {max-width: 600px !important;}
+		</style>
+		<script type="text/javascript" data-cfasync="false">
+			var sociallocker_use = false;
+			function sociallocker_plusone(plusone) {
+				if (plusone.state == "on") {
+					var data = {post: "71298", action: "sociallocker", network: "google"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				}
+			}
+			//FB.init();
+			$(document).ready(function() {
+				FB.Event.subscribe("edge.create", function(href) {
+					var data = {post: "71298", action: "sociallocker", network: "facebook"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				});
+				twttr.ready(function (twttr) {
+					twttr.events.bind("tweet", function(event) {
+						var data = {post: "71298", action: "sociallocker", network: "twitter"};
+						$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+							if (sociallocker_use) location.reload();
+						});
+					});
+				});
+			});
+		</script><div><img src="http://wib.wordisbond.netdna-cdn.com/resize/960x400/r/" width="960" height="400" style="margin-bottom: 15px;" /></div><p>Adversaree and EshBeats are a duo out of Toronto. They&#8217;ve recently dropped their second EP <em>Hood Novel,</em> after an 8 year hiatus. Peep a few tracks and check the download link after the jump.</p>
+<p><span id="more-71298"></span><iframe style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=2803681692/size=venti/bgcol=FFFFFF/linkcol=4285BB/?hd=1&#038;wmode=transparent" frameborder="0" width="400" height="100"></iframe></p>
+<p>				<script type="text/javascript">
+					sociallocker_use = true;
+				</script></p>
+<div class="sociallocker-box social-cards" id="social-cards">
+<p>Share to Download | Pls Support the Artist</p>
+<div id="sc-twitter-container-inPage" class="sc-twitter-container sc-widget-container">
+<div class="sc-widget-content">Let everyone hear this amazing content, hurry up!</div>
+<div id="sc-twitter-button-inPage" class="sc-widget-button"><a data-related="thewordisbond"  href="http://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-count="horizontal" data-lang="en">Tweet</a>    </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-googleplus-container-inPage" class="sc-googleplus-container sc-widget-container">
+<div class="sc-widget-content">Share this page with Google Plus. Feed your circles!</div>
+<div id="sc-googleplus-button-inPage" class="sc-widget-button"><g:plusone size="medium" annotation="bubble" callback="sociallocker_plusone" href=""></g:plusone>  </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-facebook-container-inPage" class="sc-facebook-container sc-widget-container">
+<div class="sc-widget-content">Like! or send this content to your friends as a Facebook message.</div>
+<div id="sc-facebook-button-inPage" class="sc-widget-button"><fb:like id="fbLikeButton" href=""  data-send="true" data-layout="button_count"  show_faces="false" width="450"></fb:like></div>
+<div class="sc-widget-bottom"></div>
+</div></div>
+<p>Adversaree:<a href="https://twitter.com/giftofspeech"> Twitter </a>/ Eshbeats: <a href="https://twitter.com/eshbeats">Twitter</a></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=MrJ9pBqWASs:7XesU34qhpo:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=MrJ9pBqWASs:7XesU34qhpo:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=MrJ9pBqWASs:7XesU34qhpo:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=MrJ9pBqWASs:7XesU34qhpo:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/MrJ9pBqWASs" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img src="http://wib.wordisbond.netdna-cdn.com/resize/960x400/r/" width="960" height="400" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Adversaree and EshBeats are a duo out of Toronto. They&amp;#8217;ve recently dropped their second EP Hood Novel, after an 8 year hiatus. Peep a few tracks and check the download link after the jump. Adversaree: Twitter / Eshbeats: Twitter</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71298/adversaree-eshbeats-hood-novel-canada/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71298/adversaree-eshbeats-hood-novel-canada/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=adversaree-eshbeats-hood-novel-canada</feedburner:origLink></item><item><title>J.Rocc’s Vinyl Collection</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/qfistMCxzwk/</link><category>VIDEO</category><category>beat junkies</category><category>digging</category><category>dj a-up</category><category>j rocc</category><category>vinyl</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">DJ A-UP</dc:creator><pubDate>Wed, 05 Sep 2012 14:14:31 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71315</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/jrocc_WIB-e1346879008172.jpeg" class="attachment-slider wp-post-image" alt="jrocc_WIB" title="jrocc_WIB" style="margin-bottom: 15px;" /></div><p>Two DJs inspire me more than any others on the planet: Jazzy Jeff and J.Rocc. I can&#8217;t think of any DJs who are as innovative, technically gifted or passionate about their craft. So, for me, this is so damn interesting to hear Rocc talk about his record collection, how he buys records and the stories he can reel off about each individual piece of wax. If you love to dig, or just have a passing interest, this is a must watch. All respect the man with devices to clean and de-warp records. All hail J.Rocc!</p>
+<p><span id="more-71315"></span><br />
+<iframe src="http://www.youtube.com/embed/hp4wI_E18yE?hd=1&#038;wmode=transparent" frameborder="0" width="640" height="360"></iframe></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qfistMCxzwk:0qy5MZhMLg8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qfistMCxzwk:0qy5MZhMLg8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=qfistMCxzwk:0qy5MZhMLg8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qfistMCxzwk:0qy5MZhMLg8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/qfistMCxzwk" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/jrocc_WIB-e1346879008172.jpeg" class="attachment-slider wp-post-image" alt="jrocc_WIB" title="jrocc_WIB" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Two DJs inspire me more than any others on the planet: Jazzy Jeff and J.Rocc. I can&amp;#8217;t think of any DJs who are as innovative, technically gifted or passionate about their craft. So, for me, this is so damn interesting to hear Rocc talk about his record collection, how he buys records and the stories</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71315/j-roccs-vinyl-collection/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71315/j-roccs-vinyl-collection/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=j-roccs-vinyl-collection</feedburner:origLink></item><item><title>Blizzard – I’m Nearly There (U.K.)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/FIoYeJgeYK0/</link><category>AUDIO</category><category>blizzard</category><category>hip hop</category><category>manchester</category><category>sooner than never</category><category>uk</category><category>VIDEO</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">~lork</dc:creator><pubDate>Wed, 05 Sep 2012 12:47:59 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71297</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/blizzard-rapper.jpg" class="attachment-slider wp-post-image" alt="blizzard rapper" title="blizzard rapper" style="margin-bottom: 15px;" /></div><p>Blizzard is perhaps known better on Word Is Bond for <strong><a href="http://www.thewordisbond.com/49497/freestyle-cocky-17-year-old-gets-ruined-in-a-rap-battle-against-his-english-teacher-u-k/" target="_blank">his battle with Mark Grist</a></strong>,<strong> </strong>which was a viral sensation, but he is a talented MC in his own right. He originates from Manchester, local to Word Is Bond Editor DJ A-Up, More a Grime artist than Hip Hop, his flow and raw lyrics can be mutually appreciated, and at just 18 there is much more to come from him. From his &#8216;Sooner Than Never&#8217; EP.</p>
+<p><span id="more-71297"></span></p>
+<p><iframe src="http://www.youtube.com/embed/U2MxoftdRrE?hd=1&#038;wmode=transparent" frameborder="0" width="640" height="360"></iframe></p>
+<p style="text-align: center;"><strong>Purchase: <a href="http://itunes.apple.com/gb/album/sooner-than-never/id556856754" target="_blank">iTunes</a></strong></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=FIoYeJgeYK0:NpFsaKKtls8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=FIoYeJgeYK0:NpFsaKKtls8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=FIoYeJgeYK0:NpFsaKKtls8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=FIoYeJgeYK0:NpFsaKKtls8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/FIoYeJgeYK0" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/blizzard-rapper.jpg" class="attachment-slider wp-post-image" alt="blizzard rapper" title="blizzard rapper" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Blizzard is perhaps known better on Word Is Bond for his battle with Mark Grist, which was a viral sensation, but he is a talented MC in his own right. He originates from Manchester, local to Word Is Bond Editor DJ A-Up, More a Grime artist than Hip Hop, his flow and raw lyrics can be</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71297/blizzard-im-nearly-there-u-k/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71297/blizzard-im-nearly-there-u-k/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=blizzard-im-nearly-there-u-k</feedburner:origLink></item><item><title>JuSoul – debris.02</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/qEGQrgL69-0/</link><category>AUDIO</category><category>602Diggler</category><category>debris.02</category><category>Instrumental</category><category>JuSoul</category><category>underground hiphop</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">602Diggler</dc:creator><pubDate>Wed, 05 Sep 2012 10:20:15 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71289</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/Jusoul6-e1346864954551.jpg" class="attachment-slider wp-post-image" alt="Jusoul6" title="Jusoul6" style="margin-bottom: 15px;" /></div><p>Germany&#8217;s composer &#8220;JuSoul&#8221; dropped his second installment for his debris series.. Some leftover heaters that went unfinished.. Enjoy!<br />
+<span id="more-71289"></span></p>
+<p>#leftovers<br />
+unfinished stuff..</p>
+<p><iframe width="400" height="100" style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=3224756484/size=venti/bgcol=FFFFFF/linkcol=4285BB/" allowtransparency="true?hd=1&#038;wmode=transparent" frameborder="0"><a href="http://jusoul.bandcamp.com/album/debris-02">debris.02 by JuSoul</a></iframe></p>
+<p>WIB2.0 OVERRIDE&#8230; </p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qEGQrgL69-0:edjXU3_C488:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qEGQrgL69-0:edjXU3_C488:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=qEGQrgL69-0:edjXU3_C488:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=qEGQrgL69-0:edjXU3_C488:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/qEGQrgL69-0" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/Jusoul6-e1346864954551.jpg" class="attachment-slider wp-post-image" alt="Jusoul6" title="Jusoul6" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Germany&amp;#8217;s composer &amp;#8220;JuSoul&amp;#8221; dropped his second installment for his debris series.. Some leftover heaters that went unfinished.. Enjoy! #leftovers unfinished stuff.. debris.02 by JuSoul WIB2.0 OVERRIDE&amp;#</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71289/jusoul-debris-02/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71289/jusoul-debris-02/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=jusoul-debris-02</feedburner:origLink></item><item><title>The Pharcyde – Passin’ Me By (Fly As Pie Remix, Throwback 1993)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/YbjqvXekwCA/</link><category>AUDIO</category><category>fly as pie remix</category><category>hip hop</category><category>passin me by</category><category>pharcyde</category><category>rare</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">~lork</dc:creator><pubDate>Wed, 05 Sep 2012 07:46:49 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71281</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/the-pharcyde.jpg" class="attachment-slider wp-post-image" alt="the pharcyde" title="the pharcyde" style="margin-bottom: 15px;" /></div><p>It&#8217;s a nice day and I&#8217;m in a good mood so I thought I&#8217;d share one of my favourite tracks &#8211; and surely one of the best remixes &#8211; of all time. A Roy Ayers loop provides the basis for this beat, and man, it&#8217;s just so funky and chill and so damn good. The Pharcyde, I&#8217;m sure, need no introduction &#8211; and you can find this particular track on the &#8217;93 &#8216;Otha Fish&#8217; 12&#8243;.</p>
+<p><span id="more-71281"></span></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=YbjqvXekwCA:AFmbtfggcw4:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=YbjqvXekwCA:AFmbtfggcw4:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=YbjqvXekwCA:AFmbtfggcw4:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=YbjqvXekwCA:AFmbtfggcw4:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/YbjqvXekwCA" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/the-pharcyde.jpg" class="attachment-slider wp-post-image" alt="the pharcyde" title="the pharcyde" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;It&amp;#8217;s a nice day and I&amp;#8217;m in a good mood so I thought I&amp;#8217;d share one of my favourite tracks &amp;#8211; and surely one of the best remixes &amp;#8211; of all time. A Roy Ayers loop provides the basis for this beat, and man, it&amp;#8217;s just so funky and chill and so damn good. The</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71281/the-pharcyde-passin-me-by-fly-as-pie-remix-throwback-1993/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">1</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71281/the-pharcyde-passin-me-by-fly-as-pie-remix-throwback-1993/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=the-pharcyde-passin-me-by-fly-as-pie-remix-throwback-1993</feedburner:origLink><enclosure url="http://feedproxy.google.com/~r/thewordisbond/~5/HFGTZsLgI2c/The-Pharcyde-Passin-Me-By-Fly-As-Pie-Remix.mp3" length="7063427" type="audio/mpeg" /><feedburner:origEnclosureLink>http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/The-Pharcyde-Passin-Me-By-Fly-As-Pie-Remix.mp3</feedburner:origEnclosureLink></item><item><title>A.L. –  A​.​L. VS J DILLA: THE LB EP (U.K.)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/8DiA9T3kv-s/</link><category>AUDIO</category><category>al</category><category>hip hop</category><category>J Dilla</category><category>lb ep</category><category>london</category><category>soul</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">~lork</dc:creator><pubDate>Wed, 05 Sep 2012 05:44:51 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71276</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[
+		<link type="text/css" rel="stylesheet" href="http://wib.wordisbond.netdna-cdn.com/wp-content/plugins/viral-lock/css/style.css">
+		<style type="text/css">
+			.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {display: none !important;}
+			.sociallocker-box iframe {max-width: 600px !important;}
+		</style>
+		<script type="text/javascript" data-cfasync="false">
+			var sociallocker_use = false;
+			function sociallocker_plusone(plusone) {
+				if (plusone.state == "on") {
+					var data = {post: "71276", action: "sociallocker", network: "google"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				}
+			}
+			//FB.init();
+			$(document).ready(function() {
+				FB.Event.subscribe("edge.create", function(href) {
+					var data = {post: "71276", action: "sociallocker", network: "facebook"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				});
+				twttr.ready(function (twttr) {
+					twttr.events.bind("tweet", function(event) {
+						var data = {post: "71276", action: "sociallocker", network: "twitter"};
+						$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+							if (sociallocker_use) location.reload();
+						});
+					});
+				});
+			});
+		</script><div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/al-vs-j-dilla-1.jpg" class="attachment-slider wp-post-image" alt="al vs j dilla-1" title="al vs j dilla-1" style="margin-bottom: 15px;" /></div><p>Damn, this ish is dope. Singer-songwriter A.L., hailing from East London here in the UK, goes to work over some mad J Dilla beats. With a souful touch her voice goes with Dilla just like Badu did. The Meek Mill cover is especially sweet. A really nice release this, and hopefully we hear more from her.</p>
+<p><span id="more-71276"></span><iframe style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=2761277083/size=venti/bgcol=FFFFFF/linkcol=4285BB/?hd=1&#038;wmode=transparent" frameborder="0" width="400" height="100"></iframe></p>
+<p style="text-align: center;"><strong><br />
+				<script type="text/javascript">
+					sociallocker_use = true;
+				</script></p>
+<div class="sociallocker-box social-cards" id="social-cards">
+<p>Share to Download | Pls Support the Artist</p>
+<div id="sc-twitter-container-inPage" class="sc-twitter-container sc-widget-container">
+<div class="sc-widget-content">Let everyone hear this amazing content, hurry up!</div>
+<div id="sc-twitter-button-inPage" class="sc-widget-button"><a data-related="thewordisbond"  href="http://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-count="horizontal" data-lang="en">Tweet</a>    </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-googleplus-container-inPage" class="sc-googleplus-container sc-widget-container">
+<div class="sc-widget-content">Share this page with Google Plus. Feed your circles!</div>
+<div id="sc-googleplus-button-inPage" class="sc-widget-button"><g:plusone size="medium" annotation="bubble" callback="sociallocker_plusone" href=""></g:plusone>  </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-facebook-container-inPage" class="sc-facebook-container sc-widget-container">
+<div class="sc-widget-content">Like! or send this content to your friends as a Facebook message.</div>
+<div id="sc-facebook-button-inPage" class="sc-widget-button"><fb:like id="fbLikeButton" href=""  data-send="true" data-layout="button_count"  show_faces="false" width="450"></fb:like></div>
+<div class="sc-widget-bottom"></div>
+</div></div>
+<p></strong></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=8DiA9T3kv-s:k3sF98TzEjo:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=8DiA9T3kv-s:k3sF98TzEjo:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=8DiA9T3kv-s:k3sF98TzEjo:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=8DiA9T3kv-s:k3sF98TzEjo:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/8DiA9T3kv-s" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/al-vs-j-dilla-1.jpg" class="attachment-slider wp-post-image" alt="al vs j dilla-1" title="al vs j dilla-1" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Damn, this ish is dope. Singer-songwriter A.L., hailing from East London here in the UK, goes to work over some mad J Dilla beats. With a souful touch her voice goes with Dilla just like Badu did. The Meek Mill cover is especially sweet. A really nice release this, and hopefully we hear more from</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71276/a-l-a%e2%80%8b-%e2%80%8bl-vs-j-dilla-the-lb-ep-u-k/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71276/a-l-a%e2%80%8b-%e2%80%8bl-vs-j-dilla-the-lb-ep-u-k/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=a-l-a%25e2%2580%258b-%25e2%2580%258bl-vs-j-dilla-the-lb-ep-u-k</feedburner:origLink></item><item><title>Apathy &amp; Celph Titled – School For Scoundrels</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/7liqYPXt42g/</link><category>AUDIO</category><category>apathy</category><category>ayatollah</category><category>celph titled</category><category>hip hop</category><category>unearthed</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">~lork</dc:creator><pubDate>Wed, 05 Sep 2012 03:30:56 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71268</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/apathy-celph-titled-3.jpg" class="attachment-slider wp-post-image" alt="apathy celph titled-3" title="apathy celph titled-3" style="margin-bottom: 15px;" /></div><p>The warm up to what should be a hell of an release. Apathy and Celph Titled, who are no strangers to the underground Hip Hop scene and have worked together before, drop the track &#8216;School For Scoundrels&#8217;, the first single form the upcoming compilation from Coalmine Records titled &#8216;Unearthed&#8217;. On an old school cut from producer Ayatollah complete with scratches, the duo drop some nice bars. Make sure you look at the feature list for the compilation, due out early next year &#8211; it should be fire.</p>
+<p><span id="more-71268"></span><iframe src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F55335506&amp;show_artwork=true" frameborder="no" scrolling="no" width="100%" height="166"></iframe></p>
+<div>
+<blockquote><p>WIth school doors reopening this week, Apathy and long time collaborator Celph Titled join forces once again, this time for the Ayatollah produced &#8220;School For Scoundrels.&#8221; Joining the alliance is DJ Dutchmaster who provides the intro, scratch hook and outro cuts. &#8220;School For Scoundrels&#8221; is also set to appear on the highly anticipated Coalmine Records&#8217; compilation album <em>Unearthed</em>, which is scheduled for an early second quarter release, 2013. <em>Unearthed</em> will feature guest appearances from the likes of Pharoahe Monch, Royce da 5&#8217;9&#8243;, Blu, Large Professor, Kool G Rap, Sean Price, Rock (of Heltah Skeltah) Artifacts, Diamond D, Skillz, Torae and more. Producers tapped include Nottz, M-Phazes, !llmind, Khrysis, Young Cee, Ayatollah and BeanOne, among others.</p></blockquote>
+<p style="text-align: center;"><strong>Purchase: <a href="http://itunes.apple.com/us/album/school-for-scoundrels-single/id552193241" target="_blank">iTunes</a></strong></p>
+<div></div>
+</div>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=7liqYPXt42g:f9E1NuPyY8M:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=7liqYPXt42g:f9E1NuPyY8M:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=7liqYPXt42g:f9E1NuPyY8M:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=7liqYPXt42g:f9E1NuPyY8M:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/7liqYPXt42g" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/apathy-celph-titled-3.jpg" class="attachment-slider wp-post-image" alt="apathy celph titled-3" title="apathy celph titled-3" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;The warm up to what should be a hell of an release. Apathy and Celph Titled, who are no strangers to the underground Hip Hop scene and have worked together before, drop the track &amp;#8216;School For Scoundrels&amp;#8217;, the first single form the upcoming compilation from Coalmine Records titled &amp;#8216;Unearthed&amp;#8217;. On an old school cut from</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71268/apathy-celph-titled-school-for-scoundrels/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">1</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71268/apathy-celph-titled-school-for-scoundrels/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=apathy-celph-titled-school-for-scoundrels</feedburner:origLink></item><item><title>Murohashi Takuya – Blindside (Japan)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/sT4V01glnFA/</link><category>AUDIO</category><category>Jazz Hip Hop</category><category>Murohashi Takuya</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mr. Tang</dc:creator><pubDate>Wed, 05 Sep 2012 01:32:01 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71238</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/Murohashi-Takuya_wordisbond1.jpg" class="attachment-slider wp-post-image" alt="Murohashi-Takuya_wordisbond" title="Murohashi-Takuya_wordisbond" style="margin-bottom: 15px;" /></div><p>Check this! Murohashi Takuya is my favorite producer from Japan. He dropped a free download track yesterday; and if you like this track, you can get it from Soundcloud! Enjoy!</p>
+<p><span id="more-71238"></span><br />
+<iframe src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F58669248&amp;show_artwork=true" frameborder="no" scrolling="no" width="100%" height="166"></iframe></p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=sT4V01glnFA:nC42oqazUNg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=sT4V01glnFA:nC42oqazUNg:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=sT4V01glnFA:nC42oqazUNg:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=sT4V01glnFA:nC42oqazUNg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/sT4V01glnFA" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/Murohashi-Takuya_wordisbond1.jpg" class="attachment-slider wp-post-image" alt="Murohashi-Takuya_wordisbond" title="Murohashi-Takuya_wordisbond" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Check this! Murohashi Takuya is my favorite producer from Japan. He dropped a free download track yesterday; and if you like this track, you can get it from Soundcloud! Enjoy!</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71238/murohashi-takuya-blindside/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71238/murohashi-takuya-blindside/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=murohashi-takuya-blindside</feedburner:origLink></item><item><title>Cams – Warm Up (Russia)</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/k2katvwV7I8/</link><category>AUDIO</category><category>602Diggler</category><category>cams</category><category>Instrumental</category><category>Russia</category><category>underground hip hop</category><category>Warm Up</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">602Diggler</dc:creator><pubDate>Tue, 04 Sep 2012 21:39:22 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71233</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[
+		<link type="text/css" rel="stylesheet" href="http://wib.wordisbond.netdna-cdn.com/wp-content/plugins/viral-lock/css/style.css">
+		<style type="text/css">
+			.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {display: none !important;}
+			.sociallocker-box iframe {max-width: 600px !important;}
+		</style>
+		<script type="text/javascript" data-cfasync="false">
+			var sociallocker_use = false;
+			function sociallocker_plusone(plusone) {
+				if (plusone.state == "on") {
+					var data = {post: "71233", action: "sociallocker", network: "google"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				}
+			}
+			//FB.init();
+			$(document).ready(function() {
+				FB.Event.subscribe("edge.create", function(href) {
+					var data = {post: "71233", action: "sociallocker", network: "facebook"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				});
+				twttr.ready(function (twttr) {
+					twttr.events.bind("tweet", function(event) {
+						var data = {post: "71233", action: "sociallocker", network: "twitter"};
+						$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+							if (sociallocker_use) location.reload();
+						});
+					});
+				});
+			});
+		</script><div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/3280999968-1-e1346819908396.jpg" class="attachment-slider wp-post-image" alt="3280999968-1" title="3280999968-1" style="margin-bottom: 15px;" /></div><p>Here we start off with Moscow beat crafting engineer &#8220;Cams&#8221;.. Instrumental vibes that strike a chords of beautification in music&#8230;. 13 heat rocks to suitable for all ages folks..Yes this type of musical translations are ageless.. Instrumental experimental sampling, from your everyday baps, blap sand underground hip hop slaps. Enjoy the poetry in motion folks ghea!&#8230;</p>
+<p><span id="more-71233"></span><br />
+<iframe style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=698724772/size=venti/bgcol=FFFFFF/linkcol=4285BB/?hd=1&#038;wmode=transparent" frameborder="0" width="400" height="100"></iframe></p>
+<p style="text-align: center;"><strong><br />
+				<script type="text/javascript">
+					sociallocker_use = true;
+				</script></p>
+<div class="sociallocker-box social-cards" id="social-cards">
+<p>Share to Download | Pls Support the Artist</p>
+<div id="sc-twitter-container-inPage" class="sc-twitter-container sc-widget-container">
+<div class="sc-widget-content">Let everyone hear this amazing content, hurry up!</div>
+<div id="sc-twitter-button-inPage" class="sc-widget-button"><a data-related="thewordisbond"  href="http://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-count="horizontal" data-lang="en">Tweet</a>    </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-googleplus-container-inPage" class="sc-googleplus-container sc-widget-container">
+<div class="sc-widget-content">Share this page with Google Plus. Feed your circles!</div>
+<div id="sc-googleplus-button-inPage" class="sc-widget-button"><g:plusone size="medium" annotation="bubble" callback="sociallocker_plusone" href=""></g:plusone>  </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-facebook-container-inPage" class="sc-facebook-container sc-widget-container">
+<div class="sc-widget-content">Like! or send this content to your friends as a Facebook message.</div>
+<div id="sc-facebook-button-inPage" class="sc-widget-button"><fb:like id="fbLikeButton" href=""  data-send="true" data-layout="button_count"  show_faces="false" width="450"></fb:like></div>
+<div class="sc-widget-bottom"></div>
+</div></div>
+<p></strong></p>
+<p>WIB2.0 TAKE FLIGHT&#8230;</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=k2katvwV7I8:Wz15WEmaUK8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=k2katvwV7I8:Wz15WEmaUK8:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=k2katvwV7I8:Wz15WEmaUK8:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=k2katvwV7I8:Wz15WEmaUK8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/k2katvwV7I8" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/3280999968-1-e1346819908396.jpg" class="attachment-slider wp-post-image" alt="3280999968-1" title="3280999968-1" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Here we start off with Moscow beat crafting engineer &amp;#8220;Cams&amp;#8221;.. Instrumental vibes that strike a chords of beautification in music&amp;#8230;. 13 heat rocks to suitable for all ages folks..Yes this type of musical translations are ageless.. Instrumental experimental sampling, from your everyday baps, blap sand underground hip hop slaps. Enjoy the poetry in motion folks</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71233/cams-warm-up-russia/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71233/cams-warm-up-russia/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=cams-warm-up-russia</feedburner:origLink></item><item><title>Brown Bag AllStars – Brown Label Part 2</title><link>http://feedproxy.google.com/~r/thewordisbond/~3/ESASvxMapGI/</link><category>AUDIO</category><category>602Diggler</category><category>BBAS</category><category>Brown Label</category><category>part 2</category><category>underground hip hop</category><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">602Diggler</dc:creator><pubDate>Tue, 04 Sep 2012 20:00:37 PDT</pubDate><guid isPermaLink="false">http://www.thewordisbond.com/?p=71226</guid><content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[
+		<link type="text/css" rel="stylesheet" href="http://wib.wordisbond.netdna-cdn.com/wp-content/plugins/viral-lock/css/style.css">
+		<style type="text/css">
+			.fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {display: none !important;}
+			.sociallocker-box iframe {max-width: 600px !important;}
+		</style>
+		<script type="text/javascript" data-cfasync="false">
+			var sociallocker_use = false;
+			function sociallocker_plusone(plusone) {
+				if (plusone.state == "on") {
+					var data = {post: "71226", action: "sociallocker", network: "google"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				}
+			}
+			//FB.init();
+			$(document).ready(function() {
+				FB.Event.subscribe("edge.create", function(href) {
+					var data = {post: "71226", action: "sociallocker", network: "facebook"};
+					$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+						if (sociallocker_use) location.reload();
+					});
+				});
+				twttr.ready(function (twttr) {
+					twttr.events.bind("tweet", function(event) {
+						var data = {post: "71226", action: "sociallocker", network: "twitter"};
+						$.post("http://www.thewordisbond.com/wp-admin/admin-ajax.php", data, function(response) {
+							if (sociallocker_use) location.reload();
+						});
+					});
+				});
+			});
+		</script><div><img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/BBAS-e1346808341458.jpg" class="attachment-slider wp-post-image" alt="BBAS" title="BBAS" style="margin-bottom: 15px;" /></div><p>Why not indulge yourself in a lilttle brown bag every now and then&#8230;How bout some Brown Bag Allstars though&#8230;Cause this is what your going to listen too.. 8 Cuts from the east coast to let yall know..BBAS is out here and this project is serious&#8230; It&#8217;s highly suggested you have a listen to the album, &#8220;Brown Label Part 2&#8243; .. It really knocks.. Take it the head and then the neck.. slap and support!.. ghea!</p>
+<p><span id="more-71226"></span><br />
+<iframe style="position: relative; display: block; width: 400px; height: 100px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=362394025/size=venti/bgcol=FFFFFF/linkcol=4285BB/?hd=1&#038;wmode=transparent" frameborder="0" width="400" height="100"></iframe></p>
+<p style="text-align: center;"><strong><br />
+				<script type="text/javascript">
+					sociallocker_use = true;
+				</script></p>
+<div class="sociallocker-box social-cards" id="social-cards">
+<p>Share to Download | Pls Support the Artist</p>
+<div id="sc-twitter-container-inPage" class="sc-twitter-container sc-widget-container">
+<div class="sc-widget-content">Let everyone hear this amazing content, hurry up!</div>
+<div id="sc-twitter-button-inPage" class="sc-widget-button"><a data-related="thewordisbond"  href="http://twitter.com/share" class="twitter-share-button" data-text="" data-url="" data-count="horizontal" data-lang="en">Tweet</a>    </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-googleplus-container-inPage" class="sc-googleplus-container sc-widget-container">
+<div class="sc-widget-content">Share this page with Google Plus. Feed your circles!</div>
+<div id="sc-googleplus-button-inPage" class="sc-widget-button"><g:plusone size="medium" annotation="bubble" callback="sociallocker_plusone" href=""></g:plusone>  </div>
+<div class="sc-widget-bottom"></div>
+</div>
+<div id="sc-facebook-container-inPage" class="sc-facebook-container sc-widget-container">
+<div class="sc-widget-content">Like! or send this content to your friends as a Facebook message.</div>
+<div id="sc-facebook-button-inPage" class="sc-widget-button"><fb:like id="fbLikeButton" href=""  data-send="true" data-layout="button_count"  show_faces="false" width="450"></fb:like></div>
+<div class="sc-widget-bottom"></div>
+</div></div>
+<p></strong></p>
+<p>WIB2.0 HOW WE&#8217;VE BEEN LIVIN&#8217;&#8230;</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/thewordisbond?a=ESASvxMapGI:EGXRu30VXvk:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=ESASvxMapGI:EGXRu30VXvk:V_sGLiPBpWU"><img src="http://feeds.feedburner.com/~ff/thewordisbond?i=ESASvxMapGI:EGXRu30VXvk:V_sGLiPBpWU" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/thewordisbond?a=ESASvxMapGI:EGXRu30VXvk:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/thewordisbond?d=qj6IDK7rITs" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/thewordisbond/~4/ESASvxMapGI" height="1" width="1"/>]]></content:encoded><description>&lt;div&gt;&lt;img width="960" height="400" src="http://d2jos65913uaef.cloudfront.net/wp-content/uploads/2012/09/BBAS-e1346808341458.jpg" class="attachment-slider wp-post-image" alt="BBAS" title="BBAS" style="margin-bottom: 15px;" /&gt;&lt;/div&gt;Why not indulge yourself in a lilttle brown bag every now and then&amp;#8230;How bout some Brown Bag Allstars though&amp;#8230;Cause this is what your going to listen too.. 8 Cuts from the east coast to let yall know..BBAS is out here and this project is serious&amp;#8230; It&amp;#8217;s highly suggested you have a listen to the album,</description><wfw:commentRss xmlns:wfw="http://wellformedweb.org/CommentAPI/">http://www.thewordisbond.com/71226/brown-bag-allstars-brown-label-part-2/feed/</wfw:commentRss><slash:comments xmlns:slash="http://purl.org/rss/1.0/modules/slash/">0</slash:comments><feedburner:origLink>http://www.thewordisbond.com/71226/brown-bag-allstars-brown-label-part-2/#utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=brown-bag-allstars-brown-label-part-2</feedburner:origLink></item></channel></rss>

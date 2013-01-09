@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+       <style name="customDialogStyle"> 
+        <!--  <item name="android:background">#000000</item>-->
+           <item name="android:windowTitleSize">10dp</item>
+     </style> 
+       <style name="customDialogStyle2"> 
+          <item name="android:background">#000000</item>
+     </style> 
+</resources>
