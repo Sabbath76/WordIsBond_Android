@@ -103,18 +103,14 @@ public class ItemListActivity extends FragmentActivity
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSwipePagerAdapter);
       	mViewPager.setCurrentItem(1, true);
-      	
-      	mArrayAdapter.UpdateFeed(mFeed);
-      	
+      	      	
         mArrayAdapter.notifyDataSetChanged();
         mFeatureAdapter.forceRefresh();
         mSwipePagerAdapter.notifyDataSetChanged();
 	}
 
 	public void UpdateMainApp()
-	{
-      	mArrayAdapter.UpdateFeed(mFeed);
-      	
+	{     	
         mArrayAdapter.notifyDataSetChanged();
         mFeatureAdapter.forceRefresh();
         mSwipePagerAdapter.notifyDataSetChanged();
@@ -255,7 +251,6 @@ public class ItemListActivity extends FragmentActivity
 					
 					public void onClick(View v) 
 					{
-						// TODO Auto-generated method stub
 						onToggleAutoPlay();
 					}
 				});
@@ -929,6 +924,15 @@ public class ItemListActivity extends FragmentActivity
       	{
       		UpdateMainApp();
       	}
+      	
+    	if (items)
+    	{
+	      	mArrayAdapter.UpdateFeed(mFeed);
+    	}
+    	if (features)
+    	{
+	      	mFeatureAdapter.UpdateContent(mFeed);
+    	}
       }
     
 	  private class NewFeedHandler implements Runnable 
@@ -1044,6 +1048,19 @@ public class ItemListActivity extends FragmentActivity
 	public void loadLaterItems() 
 	{
     	mFileLoader = new ASyncFileLoader(mFeed, true, true, false, mFeedType);
+    	mFileLoader.execute();
+	}
+
+	public void loadEarilerFeatures() 
+	{
+    	mFileLoader = new ASyncFileLoader(mFeed, false, false, true, mFeedType);
+    	mFileLoader.execute();
+	}
+
+	public void loadLaterFeatures() 
+
+	{
+    	mFileLoader = new ASyncFileLoader(mFeed, true, false, true, mFeedType);
     	mFileLoader.execute();
 	}
 

@@ -44,11 +44,11 @@ public class ASyncFileLoader extends AsyncTask<Void, Void, RSSFeed>
         }
         if (mItems)
         {
-	        feed.loadData(true, mNewer);
+	        feed.loadData(true, mNewer, null);
         }
         if (mFeatures)
         {
-	        feed.loadData(false, mNewer);
+	        feed.loadData(false, mNewer, null);
         }
         if ((feed.getItemCount() == 0) && (feed.getFeatureCount() == 0))
         {

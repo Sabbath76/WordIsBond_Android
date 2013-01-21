@@ -3,9 +3,11 @@ package com.tomapp.wordisbond;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -73,7 +75,7 @@ public class RSSFeed
 	public final int BUFFER_SIZE = 2024;
 	public final int SPLIT_SIZE = 20;
 	
-	
+	private boolean mLoadError = false;
 	
 	
 	private String _title = null;
@@ -504,8 +506,10 @@ public class RSSFeed
 		return URLS[mFeedType.ordinal()];
 	}
 	
-	public boolean loadData(boolean isItems, boolean newer) 
+	public boolean loadData(boolean isItems, boolean newer, Logger logger) 
 	{
+		mLoadError = false;
+		
 		String filename = getFilename(isItems);
         String path = Environment.getExternalStorageDirectory().getAbsolutePath()+DATAPATH;
         String state = Environment.getExternalStorageState();
@@ -515,6 +519,17 @@ public class RSSFeed
             try 
             {
             	File pathPattern = new File(path);
+            	if (!pathPattern.exists())
+            	{
+                    pathPattern.mkdirs();
+            	}
+            	if (!pathPattern.canRead())
+            	{
+                	if (logger != null)
+                	{
+	                	logger.Push("Cannot read from directory: " + path + filename);
+                	}
+            	}
             	FilenameFilter filter = new FilenameFilter() 
             	{
             		public boolean accept(File directory, String fileName) 
@@ -525,6 +540,21 @@ public class RSSFeed
             	File[] fileList = pathPattern.listFiles(filter);
                 if ((fileList == null) || (fileList.length == 0)) 
                 {
+                	if (fileList == null)
+                	{
+                		mLoadError = true;
+                	}
+                	if (logger != null)
+                	{
+                		if (fileList == null)
+                		{
+		                	logger.Push("No file found: (fileList empty)" + path + filename);
+                		}
+                		else
+                		{
+		                	logger.Push("No file found: " + path + filename);
+                		}
+                	}
                 	return false;
                 }
                 // Open input stream
@@ -560,7 +590,13 @@ public class RSSFeed
             			fileNum = Math.max(mLoadedFeatureFile-1, 0);            			
             		}
                 }
-                
+
+            	if (logger != null)
+            	{
+                	logger.Push("Num files: " + fileList.length + " Loading: " + fileNum);
+                	logger.Push("Loading: " + fileList[fileNum].getAbsolutePath());
+            	}
+
                 FileInputStream fIn = new FileInputStream(fileList[fileNum]);
                 
                 try
@@ -573,16 +609,32 @@ public class RSSFeed
 		                LoadItems(ois);
 		                mNumItemFiles = fileList.length;
 		                mLoadedItemFile = fileNum;
+
+		                if (logger != null)
+		            	{
+		                	logger.Push("Loaded: " + _itemcount);
+		            	}
 	                }
 	                else
 	                {
 		                LoadFeatures(ois);
 		                mNumFeatureFiles = fileList.length;
 		                mLoadedFeatureFile = fileNum;
+		                
+		                if (logger != null)
+		            	{
+		                	logger.Push("Loaded: " + _featurelist.size());
+		            	}
 	                }
                 }
                 catch (IOException e) 
                 {
+	                if (logger != null)
+	            	{
+	                	logger.Push("Exception loading: " + path);
+	                	logger.Push("Error: " + e.getMessage());
+	            	}
+	                
                 	//--- Save off a copy of the offending file!
                 	File dst = new File("ERROR_"+path);
                     OutputStream out = new FileOutputStream(dst);
@@ -640,6 +692,29 @@ public class RSSFeed
                 int currentItem = numItems;
                 int startFileID = isItems ? mNumItemFiles-1 : mNumFeatureFiles-1;
                 startFileID = Math.max(startFileID, 0);
+                
+                if (numRecords > 1)
+                {
+	                // Open output stream
+                	String newFilename = String.format("%s_%03d", path + "SPLIT_" + filename, startFileID);
+	                FileOutputStream fOut = new FileOutputStream(newFilename);
+	                BufferedOutputStream bos = new BufferedOutputStream(fOut, BUFFER_SIZE);   
+	                ObjectOutputStream oos = new ObjectOutputStream(bos);
+	                
+	                if (isItems)
+	                {
+		                SaveItems(oos, 0, numItems);
+	                }
+	                else
+	                {
+		                SaveFeatures(oos, 0, numItems);
+	                }
+                	
+	                // Close output stream
+	                oos.flush();
+	                fOut.close();
+                }
+                
                 for (int i=0; i<numRecords; i++)
                 {
 	                // Open output stream
@@ -689,5 +764,8 @@ public class RSSFeed
 	{
 		return mFeedType;
 	}
-
+	public boolean hadLoadError() 
+	{
+		return mLoadError;
+	}
 }

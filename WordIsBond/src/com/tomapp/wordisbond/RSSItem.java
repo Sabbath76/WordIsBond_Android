@@ -371,9 +371,18 @@ public class RSSItem //implements Runnable
     	{
     		if (theWebView.contains("soundcloud"))
 	    	{
+//    			https://api.soundcloud.com/tracks/3100297/stream?client_id=YOUR_CLIENT_ID
 				_mediaSource = theWebView.replace("http://w.soundcloud.com/player/?url=", "");
+				_mediaSource = theWebView.replace("https://w.soundcloud.com/player/?url=", "");
 				_mediaSource = _mediaSource.replace("%3A", ":");
 				_mediaSource = _mediaSource.replace("%2F", "/");
+
+//    			int trackidx = _mediaSource.indexOf("tracks/");
+//    			if (trackidx >= 0)
+//    			{
+//					_mediaSource = _mediaSource.substring(trackidx+7);
+//    			}
+
 				Integer cut = _mediaSource.indexOf('&');
 				if (cut >= 0)
 				{
@@ -412,10 +421,10 @@ public class RSSItem //implements Runnable
 
     			int videoidx = theWebView.indexOf("embed/");
     			int endpt = theWebView.indexOf("?", videoidx);
-    			if ((videoidx >= 0) && (endpt >= 0))
+    			if ((videoidx >= 0))// && (endpt >= 0))
     			{
     				videoidx += 6;
-    				String videoNumber = theWebView.substring(videoidx, endpt);
+    				String videoNumber = (endpt >= 0) ? theWebView.substring(videoidx, endpt) : theWebView.substring(videoidx);
     				
     				int width, height;
 

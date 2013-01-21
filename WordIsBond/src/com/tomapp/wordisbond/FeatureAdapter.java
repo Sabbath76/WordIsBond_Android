@@ -4,6 +4,7 @@ import java.util.Vector;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -22,6 +23,10 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 	
 	private int mLeftViewIndex = -1;
 	private int mRightViewIndex = -1;
+
+	boolean mHasNewer = false;
+	boolean mHasOlder = false;
+	private int mColourResource = -1;
 	
 	final int NUM_FEATURE_SLOTS = 4;
 	
@@ -49,6 +54,10 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 	void UpdateContent(RSSFeed feed)
 	{
 		mFeed = feed;
+		
+		mHasNewer = feed.hasLaterFeatureFile();
+		mHasOlder = feed.hasEarlierFeatureFile();
+		mColourResource = feed.getColour();
 	}
 	
 	boolean mForceUpdateAll = false;
@@ -177,18 +186,32 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 
 		int totalFeatures = mFeed.getFeatureCount();
 		int currentItem = viewPager.getCurrentItem();
-		int maxFeature = Math.min(currentItem+(NUM_FEATURE_SLOTS/2), totalFeatures);
-		int minFeature = Math.max(maxFeature-NUM_FEATURE_SLOTS, 0);
-		maxFeature = Math.min(minFeature+NUM_FEATURE_SLOTS, totalFeatures);
+		int firstFeatureID = mHasNewer ? -1 : 0;
+		int lastFeatureID = totalFeatures + (mHasOlder ? 1 : 0);
+		int maxFeature = Math.min(currentItem+(NUM_FEATURE_SLOTS/2), lastFeatureID);
+		int minFeature = Math.max(maxFeature-NUM_FEATURE_SLOTS, firstFeatureID);
+		maxFeature = Math.min(minFeature+NUM_FEATURE_SLOTS, lastFeatureID);
+		int colour = ItemListActivity.main.getResources().getColor(mColourResource);
 		if (minFeature != mLeftViewIndex)
 		{
 			int imageID = 0;
 			for (int i=minFeature; i<maxFeature; i++)
 			{
-				RSSItem feature = mFeed.getFeature(i);
-		        ItemListActivity.main.imageDownloader.download(feature.getImageURL(), mImages[imageID]);
-//IMGFIDDLE				ItemListActivity.main.mImageManager.displayImage(feature.getImageURL(), mImages[imageID], R.drawable.bond_logo, i);
-//				mImages[i].setImageBitmap(mFeed.getFeature(currentItem+i).getImage());
+				if (i == -1)
+				{
+					mImages[imageID].setImageDrawable(new ColorDrawable(colour));
+				}
+				else if (i == totalFeatures)
+				{
+					mImages[imageID].setImageDrawable(new ColorDrawable(colour));
+				}
+				else
+				{
+					RSSItem feature = mFeed.getFeature(i);
+			        ItemListActivity.main.imageDownloader.download(feature.getImageURL(), mImages[imageID]);
+	//IMGFIDDLE				ItemListActivity.main.mImageManager.displayImage(feature.getImageURL(), mImages[imageID], R.drawable.bond_logo, i);
+	//				mImages[i].setImageBitmap(mFeed.getFeature(currentItem+i).getImage());
+				}
 				imageID++;
 			}
 			mLeftViewIndex = minFeature;
@@ -299,12 +322,24 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 			ItemListActivity.main.onFeatureSelect(featureIdx);
 		}
 		
+		int totalFeatures = mFeed.getFeatureCount();
 		int imageID = 0;
 		for (int i=mLeftViewIndex; i < mRightViewIndex; i++)
 		{
 			if (v == mImages[imageID])
 			{
-				mPager.setCurrentItem(i, true);
+				if (i == -1)
+				{
+					ItemListActivity.main.loadLaterFeatures();
+				}
+				else if (i == totalFeatures)
+				{
+					ItemListActivity.main.loadEarilerFeatures();
+				}
+				else
+				{
+					mPager.setCurrentItem(i, true);
+				}
 				break;
 			}
 			imageID++;
@@ -334,6 +369,10 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 	public void Intialise(RSSFeed feed) 
 	{
 		mFeed = feed;
+		
+		mHasNewer = feed.hasLaterFeatureFile();
+		mHasOlder = feed.hasEarlierFeatureFile();
+		mColourResource = feed.getColour();
 	}
 
 }

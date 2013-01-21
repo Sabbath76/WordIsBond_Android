@@ -72,6 +72,8 @@ public class WordIsBondService extends IntentService
 	private RSSHandler mRssHandler;
 	private RSSFeed	   mRssFeed;
 	
+	private Logger mLogger = new Logger(true);
+	
 	public static final String[] TESTXMLS =
 		{
 		"thewordisbond.xml",
@@ -141,18 +143,20 @@ public class WordIsBondService extends IntentService
 	protected void onHandleIntent(Intent intent) 
 	{
 //        String msg = intent.getStringExtra(PARAM_IN_MSG);
-        
+		
         ResultReceiver rr = (ResultReceiver) intent.getParcelableExtra("resultreceiver");
         int newFeed = intent.getIntExtra("feedType", EFeedType.FEED_TABLET.ordinal());
         mFeedType = EFeedType.values()[newFeed];
-        
+ 
+		mLogger.Push("onHandleIntent " + ((rr != null) ? "has intent" : "no intent"));
+
 //        Debug.waitForDebugger();
         
         OnUpdateFeed(rr);
 	}
 	
-/*	@Override
-	public IBinder onBind(Intent intent) 
+/*
+ 	public IBinder onBind(Intent intent) 
 	{
         Log.d(getClass().getSimpleName(), "onBind()");
         return myRemoteServiceStub;
@@ -172,105 +176,126 @@ public class WordIsBondService extends IntentService
 
         SetupFeed();
 
-        mRssFeed.loadData(true, true);
-        mRssFeed.loadData(false, true);
-    	int lastItemCount = mRssFeed.getItemCount();
-    	int lastFeatureCount = mRssFeed.getFeatureCount();
-		
-        try
+        boolean loadError = false;
+        mRssFeed.loadData(true, true, mLogger);
+        loadError = mRssFeed.hadLoadError();
+        mRssFeed.loadData(false, true, mLogger);
+        loadError = loadError || mRssFeed.hadLoadError();
+        
+        if (loadError)
         {
-        	updateFeed(mRssFeed.getURL());
-        	
-        	if (mRssFeed != null)
+        	if (mLogger != null)
         	{
-        		int numNewItems = mRssFeed.getItemCount() - lastItemCount;
-        		int numNewFeatures = mRssFeed.getFeatureCount() - lastFeatureCount;
-        		boolean hasNewItems = (numNewItems != 0);
-        		boolean hasNewFeatures = (numNewFeatures != 0);
-
-        		if (hasNewItems || hasNewFeatures || mForceUpdate)
-        		{
-        			mForceUpdate = false;
-
-/*    				synchronized (mListeners) 
-    				{
-    					for (RSSServiceListener listener : mListeners) 
-    					{
-    						try 
-    						{
-    							listener.onNewFeed(mRssFeed.getPubDate());
-    						} 
-    						catch (RemoteException e) 
-    						{
-    							Log.w(TAG, "Failed to notify listener " + listener, e);
-    						}
-    					}
-    				}
-    				        			
-    				if (mMessenger != null)
-    				{
-	            		Message msg = Message.obtain();
-	            	    msg.arg1 = numNewItems;
-	            	    msg.obj = mRssFeed;
-	            	    
-	            	    try 
-	            	    {
-	            	        mMessenger.send(msg);
-	            	    } 
-	            	    catch (android.os.RemoteException e1) 
-	            	    {
-	            	      Log.w(getClass().getName(), "Exception sending message", e1);
-	            	    }
-    				}
-*/
-            	    if (hasNewItems || hasNewFeatures)
-            	    {
-	        			NotificationManager notificationManager = (NotificationManager) 
-	        					  getSystemService(NOTIFICATION_SERVICE); 
-	        			
-	        			int icon = R.drawable.logo;
-	        			CharSequence tickerText = "New RSS Feed Recieved";
-	        			long when = System.currentTimeMillis();
-	
-	        			Notification notification = new Notification(icon, tickerText, when); 
-	        			
-	        			Context context = getApplicationContext();
-	        			CharSequence contentTitle = "Word Is Bond";
-	        			CharSequence contentText = "New RSS Feed Received - " + numNewItems + " new posts";
-	        			if (numNewFeatures > 0)
-	        			{
-	        				String newFeatures = " " + numNewFeatures + " new features";
-	        				contentText = contentText + newFeatures;
-	        			}
-	//        			for (int i=0; i<numNewItems; i++)
-	//        			{
-	//        				contentText = contentText + "\n" + mRssFeed.getItem(i).getTitle();
-	//        			}
-	        			Toast.makeText(this, contentText, Toast.LENGTH_SHORT).show();
-	        			
-	        			Intent notificationIntent = new Intent(this, ItemListActivity.class);
-	        			PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-	
-	        			notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
-	        			
-	        			final int HELLO_ID = 1;
-	
-	        			notificationManager.notify(HELLO_ID, notification);
-
-	        			if (hasNewItems)
-	        			{
-	        				mRssFeed.saveFile(true);
-	        			}
-	        			if (hasNewFeatures)
-	        			{
-	        				mRssFeed.saveFile(false);
-	        			}
-            	    }
-        		}
+        		mLogger.Push("LOAD ERROR - skipping update!");	
         	}
-        } 
-        catch (Exception e) 
+        }
+        else
         {
+	    	int lastItemCount = mRssFeed.getItemCount();
+	    	int lastFeatureCount = mRssFeed.getFeatureCount();
+	    	
+        	if (mLogger != null)
+        	{
+				mLogger.Push("Items: " + lastItemCount + " Features: " + lastFeatureCount);	
+        	}
+			
+	        try
+	        {
+	        	updateFeed(mRssFeed.getURL());
+	        	
+	        	if (mRssFeed != null)
+	        	{
+	        		int numNewItems = mRssFeed.getItemCount() - lastItemCount;
+	        		int numNewFeatures = mRssFeed.getFeatureCount() - lastFeatureCount;
+	        		boolean hasNewItems = (numNewItems != 0);
+	        		boolean hasNewFeatures = (numNewFeatures != 0);
+	
+	        		if (hasNewItems || hasNewFeatures || mForceUpdate)
+	        		{
+	        			mForceUpdate = false;
+	
+	/*    				synchronized (mListeners) 
+	    				{
+	    					for (RSSServiceListener listener : mListeners) 
+	    					{
+	    						try 
+	    						{
+	    							listener.onNewFeed(mRssFeed.getPubDate());
+	    						} 
+	    						catch (RemoteException e) 
+	    						{
+	    							Log.w(TAG, "Failed to notify listener " + listener, e);
+	    						}
+	    					}
+	    				}
+	    				        			
+	    				if (mMessenger != null)
+	    				{
+		            		Message msg = Message.obtain();
+		            	    msg.arg1 = numNewItems;
+		            	    msg.obj = mRssFeed;
+		            	    
+		            	    try 
+		            	    {
+		            	        mMessenger.send(msg);
+		            	    } 
+		            	    catch (android.os.RemoteException e1) 
+		            	    {
+		            	      Log.w(getClass().getName(), "Exception sending message", e1);
+		            	    }
+	    				}
+	*/
+	            	    if (hasNewItems || hasNewFeatures)
+	            	    {
+	            			mLogger.Push("New items: " + numNewItems + " New Features: " + numNewFeatures);
+	            	    	
+		        			NotificationManager notificationManager = (NotificationManager) 
+		        					  getSystemService(NOTIFICATION_SERVICE); 
+		        			
+		        			int icon = R.drawable.logo;
+		        			CharSequence tickerText = "New RSS Feed Recieved";
+		        			long when = System.currentTimeMillis();
+		
+		        			Notification notification = new Notification(icon, tickerText, when); 
+		        			
+		        			Context context = getApplicationContext();
+		        			CharSequence contentTitle = "Word Is Bond";
+		        			CharSequence contentText = "New RSS Feed Received - " + numNewItems + " new posts";
+		        			if (numNewFeatures > 0)
+		        			{
+		        				String newFeatures = " " + numNewFeatures + " new features";
+		        				contentText = contentText + newFeatures;
+		        			}
+		//        			for (int i=0; i<numNewItems; i++)
+		//        			{
+		//        				contentText = contentText + "\n" + mRssFeed.getItem(i).getTitle();
+		//        			}
+		        			Toast.makeText(this, contentText, Toast.LENGTH_SHORT).show();
+		        			
+		        			Intent notificationIntent = new Intent(this, ItemListActivity.class);
+		        			PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+		
+		        			notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
+		        			
+		        			final int HELLO_ID = 1;
+		
+		        			notificationManager.notify(HELLO_ID, notification);
+	
+		        			if (hasNewItems)
+		        			{
+		        				mRssFeed.saveFile(true);
+		        			}
+		        			if (hasNewFeatures)
+		        			{
+		        				mRssFeed.saveFile(false);
+		        			}
+	            	    }
+	        		}
+	        	}
+	        } 
+	        catch (Exception e) 
+	        {
+	        }
         }
         
 		if (rr != null)
