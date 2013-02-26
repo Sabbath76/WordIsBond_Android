@@ -89,19 +89,20 @@ public final class R {
         public static final int placeholder=0x7f02003e;
         public static final int play=0x7f02003f;
         public static final int playimage=0x7f020040;
-        public static final int speaker_icon=0x7f020041;
-        public static final int startup=0x7f020042;
-        public static final int streaming=0x7f020043;
-        public static final int streaminganim=0x7f020044;
-        public static final int text=0x7f020045;
-        public static final int top_fastforward=0x7f020046;
-        public static final int top_logo=0x7f020047;
-        public static final int top_options=0x7f020048;
-        public static final int top_play=0x7f020049;
-        public static final int top_rewind=0x7f02004a;
-        public static final int video=0x7f02004b;
-        public static final int video_icon=0x7f02004c;
-        public static final int videoplay=0x7f02004d;
+        public static final int slide=0x7f020041;
+        public static final int speaker_icon=0x7f020042;
+        public static final int startup=0x7f020043;
+        public static final int streaming=0x7f020044;
+        public static final int streaminganim=0x7f020045;
+        public static final int text=0x7f020046;
+        public static final int top_fastforward=0x7f020047;
+        public static final int top_logo=0x7f020048;
+        public static final int top_options=0x7f020049;
+        public static final int top_play=0x7f02004a;
+        public static final int top_rewind=0x7f02004b;
+        public static final int video=0x7f02004c;
+        public static final int video_icon=0x7f02004d;
+        public static final int videoplay=0x7f02004e;
     }
     public static final class id {
         public static final int close=0x7f08001a;

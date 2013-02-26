@@ -27,6 +27,7 @@ import android.os.RemoteException;
 import android.os.ResultReceiver;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.text.format.Time;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -66,6 +67,7 @@ public class ItemListActivity extends FragmentActivity
     ViewPager mViewPager;
 	public RSSFeed mFeed = null;
 	public int mSelectedItem = 0;
+	public boolean mItemIsHeld = false;
 	public boolean mIsInstalled = false;
 	public boolean mAutoPlaying = false;
 	public boolean mIsLandscape = false;
@@ -534,6 +536,10 @@ public class ItemListActivity extends FragmentActivity
 			mSelectedItem = position;
 		}
 	}
+
+	public void setReleased(int position) 
+	{
+	}
 	
 	public int getSelected()
 	{
@@ -979,6 +985,8 @@ public class ItemListActivity extends FragmentActivity
         	}
 */        }
     };
+	private int mHighlightPosition = -1;
+	private long mHoldTime = 0;
 
     void doBindService() 
     {
@@ -1063,5 +1071,35 @@ public class ItemListActivity extends FragmentActivity
     	mFileLoader = new ASyncFileLoader(mFeed, true, false, true, mFeedType);
     	mFileLoader.execute();
 	}
+
+	public void onReleaseSelected() 
+	{
+		mSwipePagerAdapter.onReleaseSelected();
+	}
+	
+
+    public void showHighlight(int pos)
+    {
+    	mHoldTime = System.nanoTime();
+    	mHighlightPosition = pos;
+    	mSwipePagerAdapter.showSweep(true);
+    }
+
+    public void clearHighlight()
+    {
+    	mHighlightPosition = -1;
+    	mSwipePagerAdapter.showSweep(false);
+    }
+    
+    public int getHighlightPosition()
+    {
+    	return mHighlightPosition;
+    }
+
+    public long getHighlightTime()
+    {
+    	long timeNow = System.nanoTime();
+    	return timeNow - mHoldTime;
+    }
 
 }

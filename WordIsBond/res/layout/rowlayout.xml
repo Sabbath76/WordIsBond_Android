@@ -47,21 +47,14 @@
         android:layout_gravity="right" />
     
 </LinearLayout>
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/icon"
-        android:minLines="0"
-        android:minHeight="0dp"
-        android:background="#ffffff"
-        android:singleLine="false"
-        android:text="@+id/description"
-        android:ellipsize="none"
-        android:textSize="15dp" >
-    </TextView>
-
+
+<!--  <ImageView
+    android:id="@+id/slide"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:src="@drawable/slide" />-->
 
 </RelativeLayout>
 

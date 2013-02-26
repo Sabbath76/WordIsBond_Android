@@ -15,6 +15,7 @@ public class SwipePagerAdapter extends FragmentPagerAdapter
 	public RSSVideoFragment mVideoFragment;
 	RSSListFragment mListFragment;
 	RSSItemView mItemFragment;
+	boolean mShowSweep;
 		
 	public SwipePagerAdapter(FragmentManager fm) 
 	{		
@@ -27,7 +28,14 @@ public class SwipePagerAdapter extends FragmentPagerAdapter
 		// if horizontal???
 //		if (position == 1)
 //			return 0.5f;
-		return 1.0f;
+		if (mShowSweep && (position == 1))
+		{
+			return 0.8f;
+		}
+		else
+		{
+			return 1.0f;
+		}
 	}
 	
 	public void Initialise(RSSFeed feed, RSSArrayAdapter adapter, FeatureAdapter featureAdapter)
@@ -126,5 +134,15 @@ public class SwipePagerAdapter extends FragmentPagerAdapter
 	public int getCount()
 	{
 		return 3;
+	}
+
+	public void onReleaseSelected() 
+	{
+		mListFragment.onReleaseSelected();
+	}
+
+	public void showSweep(boolean showSweep) 
+	{
+		mShowSweep = showSweep;
 	}
 }

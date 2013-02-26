@@ -21,34 +21,11 @@
     <ImageView
         android:id="@+id/icon"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/placeholder" >
     </ImageView>
-<LinearLayout
-    android:layout_height="25dp"
-    android:layout_width="fill_parent"
-    android:orientation="horizontal"
-    android:layout_alignParentBottom="true"
-    android:background="#90000000"
-    >
-    <TextView
-        android:id="@+id/label"
-        android:layout_height="20dp"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:ellipsize="end" />
-
-    <TextView
-        android:id="@+id/date"
-        android:layout_height="20dp"
-        android:layout_width="60dp"
-        android:layout_weight="0"
-        android:layout_gravity="right" />
-    
-</LinearLayout>
-
-    <TextView
+    <TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

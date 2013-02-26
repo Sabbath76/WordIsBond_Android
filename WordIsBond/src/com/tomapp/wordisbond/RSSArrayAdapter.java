@@ -17,6 +17,7 @@ import android.view.ViewTreeObserver;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeObserver.OnGlobalLayoutListener
@@ -34,13 +35,15 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 	private int mColourResource = -1;
 	
 	private View mFeatureView = null;
+	private View mExpandedView = null;
 
 	
-	enum EType
+	public enum EType
 	{
 		Type_Features,
 		Type_Earlier,
 		Type_Item,
+		Type_ItemExpanded,
 		Type_Later
 	};
 	
@@ -72,7 +75,11 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 		if (mSelectedPos == position)
 			mSelectedPos = -1;
 		else
+		{
 			mSelectedPos = position;
+			
+//			mListView.smoothScrollToPositionFromTop(position, 10);
+		}
 		notifyDataSetChanged();
 		
 		SType type = getType(position);
@@ -109,6 +116,7 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 	
 	SType getType(int idx)
 	{
+		boolean isSelected = idx == mSelectedPos;
 		if (mHasFeatures)
 		{
 			if (idx == 0)
@@ -131,6 +139,10 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 			{
 				return new SType(EType.Type_Earlier, -1);
 			}
+		}
+		if (isSelected)
+		{
+			return new SType(EType.Type_ItemExpanded, idx);
 		}
 		return new SType(EType.Type_Item, idx);
 	}
@@ -165,6 +177,8 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
     	case Type_Earlier:
     	case Type_Later:
     		return 1;
+    	case Type_ItemExpanded:
+    		return 3;
     	case Type_Item:
    		default:    			
     		return 2;
@@ -174,7 +188,7 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
     @Override
     public int getViewTypeCount() 
     {
-        return 3;
+        return 4;
     }
 
     class ViewPagerClickListener extends GestureDetector.SimpleOnGestureListener
@@ -196,10 +210,14 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
         }
     }
 
+    ListView mListView = null;
+    
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) 
 	{		
 		SType type = getType(position);
+		
+		mListView = (ListView)parent;
 		
 		if (type.type == EType.Type_Features)
 		{
@@ -266,18 +284,24 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 			
 			return rowView;
 		}
-		else if (type.type == EType.Type_Item)
+		else if ((type.type == EType.Type_Item)
+				|| (type.type == EType.Type_ItemExpanded))
 		{
 			RSSItem item = items.get(type.itemIdx);
 	
 			View rowView = convertView;
-			SViewHolder viewHolder = null;
-			if ((convertView == null) || (convertView == mFeatureView))
+			if (type.type == EType.Type_ItemExpanded)
+			{
+				rowView = mExpandedView;
+			}
+			SViewHolder viewHolder = rowView == null ? null : (SViewHolder)rowView.getTag();
+			if ((viewHolder == null) || (viewHolder.GetType() != type.type))
 			{
 				LayoutInflater inflater = (LayoutInflater) context
-						.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				rowView = inflater.inflate(R.layout.rowlayout, parent, false);
-				viewHolder = new SViewHolder();
+						.getSystemService(Context.LAYOUT_INFLATER_SERVICE);				
+				int layoutRes = (type.type == EType.Type_ItemExpanded) ? R.layout.rowlayoutexpanded : R.layout.rowlayout;
+				rowView = inflater.inflate(layoutRes, parent, false);
+				viewHolder = new SViewHolder(type.type);
 	
 				viewHolder.label = (TextView) rowView.findViewById(R.id.label);
 				viewHolder.date = (TextView) rowView.findViewById(R.id.date);
@@ -288,15 +312,22 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 				SViewHolder.smViewHolders.add(viewHolder);
 				
 				rowView.setTag(viewHolder);
+				
+				if (type.type == EType.Type_ItemExpanded)
+				{
+					mExpandedView = rowView;
+				}
 			}
-			else
-			{
-				viewHolder = (SViewHolder)rowView.getTag();
-			}
+			
 			viewHolder.SetUser(item);
-			viewHolder.label.setText(item.getTitle());
-			if (item.mShortPubDate != null)
+			if (viewHolder.label != null)
+			{
+				viewHolder.label.setText(item.getTitle());
+			}
+			if ((item.mShortPubDate != null) && (viewHolder.date != null))
+			{
 				viewHolder.date.setText(item.mShortPubDate);
+			}
 			rowView.setBackgroundResource(mColourResource);
 			// Change the icon for Windows and iPhone
 
@@ -361,25 +392,29 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 			int newHeight = mDefaultImageHeight;
 			if (mSelectedPos == position)
 			{
-				if ((viewHolder.image != null))// && (image != null))
-				{
-					float widthScale = (float)viewHolder.image.getWidth() / (float)imageWidth;//image.getWidth();
-					newHeight = (int)(widthScale * (float)imageHeight);//(float)image.getHeight());
-				}
+//				if ((viewHolder.image != null))// && (image != null))
+//				{
+//					float widthScale = (float)viewHolder.image.getWidth() / (float)imageWidth;//image.getWidth();
+//					newHeight = (int)(widthScale * (float)imageHeight);//(float)image.getHeight());
+//				}
 	
-				viewHolder.desc.setVisibility(View.VISIBLE);
+//				viewHolder.desc.setVisibility(View.VISIBLE);
 		        viewHolder.desc.setText(Html.fromHtml(item.getDescription()));
 			}
 			else
 			{
-				viewHolder.desc.setText(null);
-				viewHolder.desc.setVisibility(View.GONE);
+//				viewHolder.desc.setText(null);
+//				viewHolder.desc.setVisibility(View.GONE);
 			}
+			
+/* scale explicitly
 			if (viewHolder.image.getLayoutParams().height != newHeight)
+
 			{
 				viewHolder.image.getLayoutParams().height = newHeight;
 				viewHolder.image.requestLayout();
 			}
+*/			
 			
 			if (position < mUpdateAnimation)
 			{

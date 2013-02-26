@@ -18,6 +18,17 @@ public class SViewHolder
 	ImageButton button;
 	int position;
 	RSSItem curItem = null;
+	RSSArrayAdapter.EType type;
+	
+	public SViewHolder(RSSArrayAdapter.EType _type)
+	{
+		type = _type;
+	}
+	
+	RSSArrayAdapter.EType GetType()
+	{
+		return type;
+	}
 	  
 	void SetUser(RSSItem newItem)
 	{

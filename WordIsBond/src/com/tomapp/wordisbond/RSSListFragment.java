@@ -189,20 +189,35 @@ public class RSSListFragment extends Fragment implements OnItemClickListener, On
 
 	public boolean onTouch(View v, MotionEvent event) 
     {
-		if (event.getAction() == MotionEvent.ACTION_DOWN)
+		switch (event.getAction())
 		{
-			float x = event.getX();
-			float y = event.getY();
-			ListView list = (ListView)v;
-			int position = list.pointToPosition((int)x, (int)y);
-		
-			if (position >= 0)
+		case MotionEvent.ACTION_DOWN:
 			{
-////				ItemListActivity.main.setSelected(position);
+/*				float x = event.getX();
+				float y = event.getY();
+				ListView list = (ListView)v;
+				int position = list.pointToPosition((int)x, (int)y);
+			
+				if (position >= 0)
+				{
+	////				ItemListActivity.main.setSelected(position);
+				}
+*/				
+		//		return true;
 			}
+		case MotionEvent.ACTION_CANCEL:
+		case MotionEvent.ACTION_UP:
+		{
 		}
+			break;
+		}
+		
 		
         return false;
     }
+
+	public void onReleaseSelected() 
+	{
+	}
 	
 }

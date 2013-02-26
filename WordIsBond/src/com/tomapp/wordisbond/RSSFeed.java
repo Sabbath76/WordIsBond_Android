@@ -13,7 +13,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
+import java.util.Arrays;
 import java.util.BitSet;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Vector;
@@ -538,6 +541,14 @@ public class RSSFeed
             		}
             	};
             	File[] fileList = pathPattern.listFiles(filter);
+                Arrays.sort(fileList, new Comparator<File>()
+                {
+                    public int compare(File p1, File p2) 
+                    {
+                       return p1.getPath().compareToIgnoreCase(p2.getPath());
+                    }
+                });
+                
                 if ((fileList == null) || (fileList.length == 0)) 
                 {
                 	if (fileList == null)

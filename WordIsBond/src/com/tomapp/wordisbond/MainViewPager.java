@@ -24,6 +24,12 @@ public class MainViewPager extends ViewPager
         {
         	return false;
         }
+        
+        if ((event.getAction() == MotionEvent.ACTION_CANCEL) || (event.getAction() == MotionEvent.ACTION_UP))
+        {
+        	ItemListActivity.main.onReleaseSelected();
+        }
+        
 
         return super.onInterceptTouchEvent(event);
     }
