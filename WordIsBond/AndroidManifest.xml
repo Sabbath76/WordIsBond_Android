@@ -11,6 +11,7 @@
     <application
         android:icon="@drawable/logo"
         android:hardwareAccelerated="true"
+        android:name="WIBApp"
         android:label="@string/app_name"
         android:theme="@style/CustomTheme">
         <!--  android:theme="@style/AppTheme" -->

@@ -47,7 +47,7 @@
         android:layout_gravity="right" />
     
 </LinearLayout>
-
+
 <!--  <ImageView
     android:id="@+id/slide"
     android:layout_width="wrap_content"

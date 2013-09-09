@@ -41,15 +41,18 @@ public class ListViewFiltered extends ListView
                 xDistance = yDistance = 0f;
                 lastX = ev.getX();
                 lastY = ev.getY();
-                
-    			int position = pointToPosition((int)lastX, (int)lastY);
-    			
-    			if (position >= 0)
-    			{
-    				ItemListActivity.main.setSelected(position);
-    				
-    				ItemListActivity.main.showHighlight(position);
-    			}
+
+                if (ItemListActivity.main.mSelectToExpand)
+                {
+	    			int position = pointToPosition((int)lastX, (int)lastY);
+	    			
+	    			if (position >= 0)
+	    			{
+	    				ItemListActivity.main.setSelected(position);
+	    				
+	//    				ItemListActivity.main.showHighlight(position);
+	    			}
+                }
                 
                 break;
             }
@@ -57,16 +60,19 @@ public class ListViewFiltered extends ListView
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
             {
-                lastX = ev.getX();
-                lastY = ev.getY();
-                
-    			int position = pointToPosition((int)lastX, (int)lastY);
-    			
-    			if (position >= 0)
-    			{
-    				ItemListActivity.main.setReleased(position);
-    			}
-    			ItemListActivity.main.clearHighlight();
+                if (ItemListActivity.main.mSelectToExpand)
+                {
+	                lastX = ev.getX();
+	                lastY = ev.getY();
+	                
+	    			int position = pointToPosition((int)lastX, (int)lastY);
+	    			
+	    			if (position >= 0)
+	    			{
+	    				ItemListActivity.main.setReleased(position);
+	    			}
+                }
+//    			ItemListActivity.main.clearHighlight();
             	break;
             }
             	
@@ -74,7 +80,7 @@ public class ListViewFiltered extends ListView
                 final float curX = ev.getX();
                 final float curY = ev.getY();
                 
-    			int position = pointToPosition((int)curX, (int)curY);
+/*    			int position = pointToPosition((int)curX, (int)curY);
     			if (position >= 0)
     			{
 	    			ItemListActivity.main.showHighlight(position);
@@ -83,7 +89,7 @@ public class ListViewFiltered extends ListView
     			{
         			ItemListActivity.main.clearHighlight();
     			}
-                
+*/                
                 xDistance += Math.abs(curX - lastX);
                 yDistance += Math.abs(curY - lastY);
                 lastX = curX;

@@ -28,7 +28,13 @@ public class SwipePagerAdapter extends FragmentPagerAdapter
 		// if horizontal???
 //		if (position == 1)
 //			return 0.5f;
-		if (mShowSweep && (position == 1))
+		
+		if (ItemListActivity.main.isFullScreen() 
+			&& ((position == 1) || (position == 2)))
+		{
+			return 0.5f;
+		}
+		else if (mShowSweep && (position == 1))
 		{
 			return 0.8f;
 		}

@@ -1,6 +1,8 @@
+/*___Generated_by_IDEA___*/
+
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Tom\\Documents\\Projects\\eclipse\\WordIsBond\\src\\com\\tomapp\\wordisbond\\RemoteService.aidl
+ * Original file: C:\\Users\\Tom\\git\\gitrepro\\WordIsBond\\src\\com\\tomapp\\wordisbond\\RemoteService.aidl
  */
 package com.tomapp.wordisbond;
 public interface RemoteService extends android.os.IInterface
@@ -23,13 +25,13 @@ public static com.tomapp.wordisbond.RemoteService asInterface(android.os.IBinder
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.tomapp.wordisbond.RemoteService))) {
 return ((com.tomapp.wordisbond.RemoteService)iin);
 }
 return new com.tomapp.wordisbond.RemoteService.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -91,7 +93,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -99,7 +101,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public void TriggerParse() throws android.os.RemoteException
+@Override public void TriggerParse() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -113,7 +115,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public com.tomapp.wordisbond.RSSFeedData GetLatestResult() throws android.os.RemoteException
+@Override public com.tomapp.wordisbond.RSSFeedData GetLatestResult() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -135,7 +137,7 @@ _data.recycle();
 }
 return _result;
 }
-public void RegisterListener(com.tomapp.wordisbond.RSSServiceListener listener) throws android.os.RemoteException
+@Override public void RegisterListener(com.tomapp.wordisbond.RSSServiceListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -150,7 +152,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void UnregisterListener(com.tomapp.wordisbond.RSSServiceListener listener) throws android.os.RemoteException
+@Override public void UnregisterListener(com.tomapp.wordisbond.RSSServiceListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

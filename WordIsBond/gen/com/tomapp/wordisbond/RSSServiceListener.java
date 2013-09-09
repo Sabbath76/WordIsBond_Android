@@ -1,6 +1,8 @@
+/*___Generated_by_IDEA___*/
+
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Users\\Tom\\Documents\\Projects\\eclipse\\WordIsBond\\src\\com\\tomapp\\wordisbond\\RSSServiceListener.aidl
+ * Original file: C:\\Users\\Tom\\git\\gitrepro\\WordIsBond\\src\\com\\tomapp\\wordisbond\\RSSServiceListener.aidl
  */
 package com.tomapp.wordisbond;
 public interface RSSServiceListener extends android.os.IInterface
@@ -23,13 +25,13 @@ public static com.tomapp.wordisbond.RSSServiceListener asInterface(android.os.IB
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.tomapp.wordisbond.RSSServiceListener))) {
 return ((com.tomapp.wordisbond.RSSServiceListener)iin);
 }
 return new com.tomapp.wordisbond.RSSServiceListener.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -61,7 +63,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -69,7 +71,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public void onNewFeed(java.lang.String pubDate) throws android.os.RemoteException
+@Override public void onNewFeed(java.lang.String pubDate) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

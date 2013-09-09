@@ -25,10 +25,7 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 	private final Context context;
 	List<RSSItem> items;
 	int mSelectedPos = -1;
-	int mOldSelectedPos = -1;
-	int mUpdateAnimation = -1;
-	int mDefaultImageHeight = -1;
-	int mNumUpdates = 0;
+	boolean mClickToExpand = true;
 	boolean mHasFeatures = false;
 	boolean mHasNewer = false;
 	boolean mHasOlder = false;
@@ -69,20 +66,25 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 
 	public void OnSelect(int position)
 	{
-		mNumUpdates = 0;
-		mUpdateAnimation = -1;
-		mOldSelectedPos = mSelectedPos;
-		if (mSelectedPos == position)
-			mSelectedPos = -1;
+		SType type = getType(position);
+		
+		if (mClickToExpand)
+		{
+			if (mSelectedPos == position)
+				mSelectedPos = -1;
+			else
+			{
+				mSelectedPos = position;
+				
+	//			mListView.smoothScrollToPositionFromTop(position, 10);
+			}
+			notifyDataSetChanged();
+		}
 		else
 		{
-			mSelectedPos = position;
-			
-//			mListView.smoothScrollToPositionFromTop(position, 10);
+			ItemListActivity.main.onItemSelect(type.itemIdx);
 		}
-		notifyDataSetChanged();
 		
-		SType type = getType(position);
 		switch(type.type)
 		{
 		case Type_Earlier:
@@ -383,44 +385,10 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 				}
 			});
 	
-			
-			if (mDefaultImageHeight <= 0)
-			{
-				mDefaultImageHeight = viewHolder.image.getLayoutParams().height;
-			}
-			
-			int newHeight = mDefaultImageHeight;
 			if (mSelectedPos == position)
 			{
-//				if ((viewHolder.image != null))// && (image != null))
-//				{
-//					float widthScale = (float)viewHolder.image.getWidth() / (float)imageWidth;//image.getWidth();
-//					newHeight = (int)(widthScale * (float)imageHeight);//(float)image.getHeight());
-//				}
-	
-//				viewHolder.desc.setVisibility(View.VISIBLE);
 		        viewHolder.desc.setText(Html.fromHtml(item.getDescription()));
 			}
-			else
-			{
-//				viewHolder.desc.setText(null);
-//				viewHolder.desc.setVisibility(View.GONE);
-			}
-			
-/* scale explicitly
-			if (viewHolder.image.getLayoutParams().height != newHeight)
-
-			{
-				viewHolder.image.getLayoutParams().height = newHeight;
-				viewHolder.image.requestLayout();
-			}
-*/			
-			
-			if (position < mUpdateAnimation)
-			{
-				mNumUpdates++;
-			}
-			mUpdateAnimation = position;
 			
 			return rowView;
 		}
@@ -448,11 +416,13 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 		}
 	}
 
-	public void UpdateFeed(RSSFeed feed) 
+	public void UpdateFeed(RSSFeed feed, boolean clickToExpand) 
 	{
 		mHasFeatures = (feed.getFeatureCount() > 0);
 		mHasNewer = feed.hasLaterItemFile();
 		mHasOlder = feed.hasEarlierItemFile();
+		
+		mClickToExpand = clickToExpand;
 		
 		mColourResource = feed.getColour();
 		if (mFeatureView != null)

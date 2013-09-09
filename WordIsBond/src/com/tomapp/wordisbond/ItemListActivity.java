@@ -70,8 +70,9 @@ public class ItemListActivity extends FragmentActivity
 	public boolean mItemIsHeld = false;
 	public boolean mIsInstalled = false;
 	public boolean mAutoPlaying = false;
-	public boolean mIsLandscape = false;
 	public boolean mFullscreen = true;
+	public boolean mSelectToExpand = true;
+	public boolean mWaitForFeed = false;
 	public int mAutoplayItem = 0;
 	public RSSFeed.EFeedType mFeedType = EFeedType.FEED_TABLET;
 	
@@ -185,8 +186,8 @@ public class ItemListActivity extends FragmentActivity
         AlarmManager am=(AlarmManager)getSystemService(Context.ALARM_SERVICE);
         Intent msgAlarmIntent = new Intent(this, WIBAlarmReceiver.class);
         PendingIntent pi = PendingIntent.getBroadcast(this, 0, msgAlarmIntent, 0);
-        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+1000, 1000 * 60 * 60, pi);       
-        
+        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+1000, 1000 * 60 * 60, pi);
+
 		SavedState data = (SavedState)getLastCustomNonConfigurationInstance();
      	if (data == null)
      	{
@@ -209,6 +210,7 @@ public class ItemListActivity extends FragmentActivity
         mSwipePagerAdapter.Initialise(mFeed, mArrayAdapter, mFeatureAdapter);
 
         mFullscreen = (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE);
+        mSelectToExpand = !mFullscreen;
 
         boolean customTitleSupported = false;
      	if (mFullscreen)
@@ -233,8 +235,12 @@ public class ItemListActivity extends FragmentActivity
      	}
      	else
      	{
-    		mIsInstalled = true;
+	    	mIsInstalled = true;
      		StartMainApp();
+     		
+	      	mArrayAdapter.UpdateFeed(mFeed, mSelectToExpand);
+	      	mFeatureAdapter.UpdateContent(mFeed);
+     		
      		mSwipePagerAdapter.refreshFragments(getSupportFragmentManager(), mViewPager);
 	        mMediaPlayer = data.mMediaPlayer;
 	        
@@ -502,6 +508,13 @@ public class ItemListActivity extends FragmentActivity
     {
 		mSelectedItem = position;
       	mSwipePagerAdapter.SetSelectedFeature(position);
+      	mViewPager.setCurrentItem(2, true);
+    }
+    
+    public void onItemSelect(int position)
+    {
+		mSelectedItem = position;
+      	mSwipePagerAdapter.SetSelectedItem(position);
       	mViewPager.setCurrentItem(2, true);
     }
 
@@ -933,7 +946,7 @@ public class ItemListActivity extends FragmentActivity
       	
     	if (items)
     	{
-	      	mArrayAdapter.UpdateFeed(mFeed);
+	      	mArrayAdapter.UpdateFeed(mFeed, mSelectToExpand);
     	}
     	if (features)
     	{
@@ -998,10 +1011,18 @@ public class ItemListActivity extends FragmentActivity
     	
 ///    	remoteServiceConnnection = new RemoteServiceConnection();
 //    	Intent intent = new Intent(ItemListActivity.this, WordIsBondService.class);
-    	Intent intent = new Intent(WordIsBondService.class.getName());
-    	intent.putExtra("FeedType", mFeedType.ordinal());
-    	intent.putExtra("resultreceiver", mResultReceiver);
-    	startService(intent);
+    	if (mWaitForFeed)
+    	{
+	    	Intent intent = new Intent(WordIsBondService.class.getName());
+	    	intent.putExtra("FeedType", mFeedType.ordinal());
+	    	intent.putExtra("resultreceiver", mResultReceiver);
+	    	startService(intent);
+    	}
+    	else
+    	{
+        	mFileLoader = new ASyncFileLoader(mFeed, true, true, true, mFeedType);
+        	mFileLoader.execute();
+    	}
 ///        bindService(intent, remoteServiceConnnection, 0);
 
     	

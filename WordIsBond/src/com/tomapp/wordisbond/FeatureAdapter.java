@@ -95,89 +95,6 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 	{
 		return 0;
 	}
-/*
-	public View getView(int position, View convertView, ViewGroup parent) 
-	{
-		FeatureViewHolder viewHolder = null;
-		View featureView = convertView;
-		if (convertView == null)
-		{
-			LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			featureView = inflater.inflate(R.layout.featurelayout, parent, false);
-
-			viewHolder = new FeatureViewHolder();
-			viewHolder.label = (TextView) featureView.findViewById(R.id.label);
-			viewHolder.date = (TextView) featureView.findViewById(R.id.date);
-			viewHolder.image = (ImageView) featureView.findViewById(R.id.icon);
-			
-			featureView.setTag(viewHolder);
-		}
-		else
-		{
-			viewHolder = (FeatureViewHolder)featureView.getTag();
-		}
-		RSSItem item = mFeed.getFeature(position);
-		viewHolder.curItem = item;
-//		item.viewHolder = viewHolder;
-		viewHolder.label.setText(item.getTitle());
-		if (item.mShortPubDate != null)
-			viewHolder.date.setText(item.mShortPubDate);
-		// Change the icon for Windows and iPhone
-		item.loadImage();
-		if (item.getImage() != null)
-		{
-			viewHolder.image.setImageBitmap(item.getImage());
-		}
-		else
-		{
-			viewHolder.image.setImageResource(R.drawable.bond_logo);
-		}
-
-		ViewPager horizListView = (ViewPager) parent;
-		mPager = horizListView;
-		int leftViewIndex = horizListView.getCurrentItem();// horizListView.getLeftViewIndex();
-		if (leftViewIndex != mLeftViewIndex)
-		{
-			mImages[0].setImageBitmap(mFeed.getFeature(leftViewIndex+0).getImage());
-			mImages[1].setImageBitmap(mFeed.getFeature(leftViewIndex+1).getImage());
-			mImages[2].setImageBitmap(mFeed.getFeature(leftViewIndex+2).getImage());
-			mImages[3].setImageBitmap(mFeed.getFeature(leftViewIndex+3).getImage());
-			mLeftViewIndex = leftViewIndex;
-		}
-
-		return featureView;
-	}
-*/	
-/*	void UpdateItem(RSSItem rssItem)
-	{
-		int numViewHolders = mViewBuffer.size();
-		for (int i=0; i<numViewHolders; i++)
-		{
-			FeatureViewHolder viewHolder = (FeatureViewHolder)mViewBuffer.get(i);
-			if (viewHolder.curItem == rssItem)
-			{
-				if (rssItem.getImage() != null)
-				{
-					viewHolder.image.setImageBitmap(rssItem.getImage());
-				}
-				else
-				{
-					viewHolder.image.setImageResource(R.drawable.bond_logo);
-				}
-				
-				break;
-			}
-		}
-		
-		for (int i=0; i<4; i++)
-		{
-			RSSItem imageItem = mFeed.getFeature(mLeftViewIndex+i);
-			if (imageItem == rssItem)
-			{
-				mImages[i].setImageBitmap(rssItem.getImage());
-			}
-		}
-	}*/
 	
     @Override
     public void startUpdate(ViewGroup container)
@@ -209,8 +126,6 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 				{
 					RSSItem feature = mFeed.getFeature(i);
 			        ItemListActivity.main.imageDownloader.download(feature.getImageURL(), mImages[imageID]);
-	//IMGFIDDLE				ItemListActivity.main.mImageManager.displayImage(feature.getImageURL(), mImages[imageID], R.drawable.bond_logo, i);
-	//				mImages[i].setImageBitmap(mFeed.getFeature(currentItem+i).getImage());
 				}
 				imageID++;
 			}
@@ -262,17 +177,8 @@ public class FeatureAdapter extends PagerAdapter implements OnClickListener
 		}
 		viewHolder.label.setText(label);
         ItemListActivity.main.imageDownloader.download(item.getImageURL(), viewHolder.image);
-//IMGFIDDLE		ItemListActivity.main.mImageManager.displayImage(item.getImageURL(), viewHolder.image, R.drawable.bond_logo, position);
-/*		item.loadImage();
-		if (item.getImage() != null)
-		{
-			viewHolder.image.setImageBitmap(item.getImage());
-		}
-		else
-		{
-			viewHolder.image.setImageResource(R.drawable.bond_logo);
-		}
-*/		viewHolder.button.setTag(item);
+
+		viewHolder.button.setTag(item);
 		item.SetMediaButton(viewHolder.button);
 		item.UpdateMediaButton();
 		
