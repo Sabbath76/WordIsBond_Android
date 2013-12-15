@@ -72,7 +72,7 @@ public class WordIsBondService extends IntentService
 	private RSSHandler mRssHandler;
 	private RSSFeed	   mRssFeed;
 	
-	private Logger mLogger = new Logger(true);
+	private Logger mLogger = new Logger(false);
 	
 	public static final String[] TESTXMLS =
 		{

@@ -331,37 +331,9 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 				viewHolder.date.setText(item.mShortPubDate);
 			}
 			rowView.setBackgroundResource(mColourResource);
-			// Change the icon for Windows and iPhone
-
-//			Bitmap image = ItemListActivity.main.mImageManager.getImage(item.getImageURL());
-
-//			if (image != null)
-//			{
-//				viewHolder.image.setImageBitmap(image);
-//			}
-//			else
-//			{
-//				viewHolder.image.setImageResource(R.drawable.bond_logo);
-//			}
 
 	        ItemListActivity.main.imageDownloader.download(item.getImageURL(), (ImageView) viewHolder.image);
 
-	        int imageHeight = viewHolder.image.getDrawable().getIntrinsicHeight();
-	        int imageWidth  = viewHolder.image.getDrawable().getIntrinsicWidth();
-
-	        Bitmap image = null;
-///IMGFIDDLE			Bitmap image = ItemListActivity.main.mImageManager.displayImage(item.getImageURL(), viewHolder.image, R.drawable.bond_logo, type.itemIdx+ItemListActivity.main.mFeed.getFeatureCount());
-/*			
-			item.loadImage();
-			if (item.getImage() != null)
-			{
-				viewHolder.image.setImageBitmap(item.getImage());
-			}
-			else
-			{
-				viewHolder.image.setImageResource(R.drawable.bond_logo);
-			}
-		*/
 	//		viewHolder.button.setSelected(item.IsPlaying());
 			viewHolder.button.setTag(item);
 	//		viewHolder.button.setClickable(item.GetMediaType() != EMediaType.Media_Text);
@@ -385,7 +357,7 @@ public class RSSArrayAdapter extends ArrayAdapter<RSSItem> implements ViewTreeOb
 				}
 			});
 	
-			if (mSelectedPos == position)
+			if ((mSelectedPos == position) && (item.getDescription() != null))
 			{
 		        viewHolder.desc.setText(Html.fromHtml(item.getDescription()));
 			}
